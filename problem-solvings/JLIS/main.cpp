@@ -126,21 +126,6 @@ int main(void)
 					goto next;
 				}
 
-				/**
-				 * maxlen[i][j] 는 순서는 중요하지 않으며
-				 * 길이도 증가하지 않는다.
-				 * */
-
-				for (k = 0; k < i; k++)
-				{
-					if (seq1[i] > seq1[k])
-						submax = max(submax, maxlen[k][j]);
-				}
-				for (k = 0; k < j; k++)
-				{
-					if (seq2[j] > seq2[k])
-						submax = max(submax, maxlen[i][k]);
-				}
 next:
 
 				maxlen[i][j] = submax;
